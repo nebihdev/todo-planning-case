@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -35,4 +34,17 @@ return [
         ],
     ],
 
+    'todo' => [
+        'importer' => [
+            'clients' => [
+                App\Services\Todo\ImportManager\Clients\TodoMockOneClient::class,
+                App\Services\Todo\ImportManager\Clients\TodoMockTwoClient::class,
+            ],
+        ],
+        'sprint_planning' => [
+            // sprint_duration as hours
+            'weekly_total_work_time' => 45,
+            'sprint_duration_in_days' => 7,
+        ],
+    ],
 ];
